@@ -11,7 +11,7 @@ class Employee {
         this.em_department = em_department;
         this.em_salary = em_salary;
     }
-
+// Copy constructor is missing
    
 }
     
@@ -31,14 +31,18 @@ class Employee {
 
         double rais_salary(double val)
         {
-            val=em_salary+=24789.12;
-            return val;
+            //print statement was missing
+            em_salary+=val;
+           
+            System.out.println("New salary = " + em_salary);//printing new salary
+            return em_salary; 
+            //return val;
             
-            //System.out.println();
+            
         }
         void change_designation(String s){
-            
-            
+            //function was empty
+            em_designation = s;
         }
         double display_salary(){
             return em_salary;
@@ -48,8 +52,8 @@ public class Lakshmisonikar {
     public static void main(String[] args) {
         Developer d1=new Developer(1,"laxmi","Tester","banking",23343.00,435, new String[]{"java", "html", "python"});
         d1.em_designation="Java 14";
-        //double val = 0;
+        double val = 24789.12;
         d1.rais_salary(val);
-        
+        //backup object is missing
     }
 }
